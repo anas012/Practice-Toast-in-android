@@ -3,6 +3,7 @@ package com.example.toastpractice;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -17,8 +18,10 @@ public class MainActivity extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Toast toast=Toast.makeText(getBaseContext(),"Hello",Toast.LENGTH_LONG);
 
-                Toast.makeText(getBaseContext(),"Hello user!How R you?",Toast.LENGTH_LONG).show();
+                toast.setGravity(Gravity.CENTER|Gravity.RIGHT,100,200);
+                toast.show();
             }
         });
     }
